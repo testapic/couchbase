@@ -34,6 +34,7 @@ class Couchbase
     protected function connect()
     {
         // prepare CouchbaseCLient
+        $config = $this->getConfig();
         $client = new \Couchbase(
             $config->get('server')->toArray(),
             $config->get('user'),
