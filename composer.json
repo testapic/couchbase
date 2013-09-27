@@ -1,0 +1,16 @@
+{
+    "name": "netzfabrik/couchbase",
+    "description": "Couchbase connectivity module for Zend Framework 2",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Couchbase": "src/"
+        },
+        "classmap": [
+        	"./Module.php"
+        ]
+    }
+}
