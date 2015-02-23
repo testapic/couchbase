@@ -1,5 +1,5 @@
 {
-    "name": "Teraglehn/couchbase",
+    "name": "netzfabrik/couchbase",
     "description": "Couchbase connectivity module for Zend Framework 2 and couchbase PHP SDK >=2.0",
     "require": {
         "php": ">=5.3.3",
