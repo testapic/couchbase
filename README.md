@@ -39,10 +39,7 @@ Place a configuration file in `config\autoload\couchbase.local.php` in your appl
 	<?php
 	return array(
 		'couchbase' => array(
-	        'server' => array(
-	            '<couchbase_ip>:<couchbase_port>',
-	            '<couchbase_ip2>:<couchbase_port2>'
-	        ),
+	        'server' => '<couchbase_ip>:<couchbase_port>',
 	        'user' => '<username>',
 	        'password' => '<password>',
 	        'bucket' => '<bucket_name>'
