@@ -17,12 +17,10 @@ class CouchbaseServiceTest extends \PHPUnit_Framework_TestCase
 	{
 		$config = array(
 			'couchbase' => array(
-				'server' => array(
-				    '127.0.0.1:8091'
-			    ),
-			    'user' => 'test',
-                'password' => 'test',
-                'bucket' => 'default'
+				'server' => '127.0.0.1:8091',
+				'user' => 'test',
+				'password' => 'test',
+				'bucket' => 'default'
 			)
 		);
 
