@@ -79,7 +79,7 @@ class Couchbase
             if(is_string($data->value))
                 $data = Json::decode($data->value, Json::TYPE_ARRAY);
             else
-                $data = $data->value;
+                $data = (array)$data->value;
         }
         catch(\CouchbaseException $e){ // The key don't exist
         	$data=null;
