@@ -73,13 +73,15 @@ class Couchbase
      */
     public function get($key)
     {
-		try {
-        	$data = $this->getCouchbaseClient()->get($key);
-			// try to json decode data back to array if it's a string
+        try {
+        	  $data = $this->getCouchbaseClient()->get($key);
             if(is_string($data->value))
                 $data = Json::decode($data->value, Json::TYPE_ARRAY);
+            else if (is_array($data->value))
+                $data = $data->value;
+            // Dirty, but does the trick
             else
-                $data = (array)$data->value;
+                $data = json_decode(json_encode($data->value), true);
         }
         catch(\CouchbaseException $e){ // The key don't exist
         	$data=null;
